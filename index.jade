@@ -10,19 +10,34 @@ mixin Service(modifier, serviceTitle)
 mixin Menu(options)
     ul.menu
         //- Activating Home item
-        li(class='menu__item' + (options.activePage == 'Home' ? ' menu__item--active-home' : '')): a.menu__link(href="#") Home
+        if (options.activePage == 'Home')
+            li(id="home" class='menu__item menu__item--active-home'): a.menu__link(href="#menu-home") Home
+        else
+            li(class='menu__item'): a.menu__link(href="#home") Home
 
         //- Activating Services item
-        li(class='menu__item' + (options.activePage == 'Services' ? ' menu__item--active-service' : '')): a.menu__link(href="#") Services
+        if (options.activePage == 'Services')
+            li(id="services" class='menu__item menu__item--active-service'): a.menu__link(href="#menu-services") Services
+        else
+            li(class='menu__item'): a.menu__link(href="#services") Services
 
         //- Activating About item
-        li(class='menu__item' + (options.activePage == 'About' ? ' menu__item--active-about' : '')): a.menu__link(href="#") About
+        if (options.activePage == 'About')
+            li(id="about" class='menu__item menu__item--active-about'): a.menu__link(href="#menu-about") About
+        else
+            li(class='menu__item'): a.menu__link(href="#about") About
 
         //- Activating Work item
-        li(class='menu__item' + (options.activePage == 'Work' ? ' menu__item--active-work' : '')): a.menu__link(href="#") Work
+        if (options.activePage == 'Work')
+            li(id="work" class='menu__item menu__item--active-work'): a.menu__link(href="#Work") Work
+        else
+            li(class='menu__item'): a.menu__link(href="#work") Work
 
         //- Activating Contacts item
-        li(class='menu__item' + (options.activePage == 'Contacts' ? ' menu__item--active-contacts' : '')): a.menu__link(href="#") Contacts
+        if (options.activePage == 'Contacts')
+            li(id="contacts" class='menu__item menu__item--active-contacts'): a.menu__link(href="#menu-contacts") Contacts
+        else
+            li(class='menu__item'): a.menu__link(href="#contacts") Contacts
 
 //- Header (logo + menu)
 mixin Header(options)
