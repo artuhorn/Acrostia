@@ -1,0 +1,69 @@
+/* SERVICE */
+
+.l-services
+  display: flex
+  justify-content: center
+  margin: 115px 0 0 0
+
+// Service block
+.service
+  width: 260px
+  min-height: 400px
+  background-color: rgba(200, 83, 90, .8)
+  border-radius: 5px
+  text-align: center
+  margin: 0 20px 0 0
+
+  &:last-child
+    margin: 0 0 0 0
+
+
+  // Icon element
+  &__icon
+    width: 140px
+    height: 140px
+    margin: 44px auto 0
+
+    // Modifiers
+    &--researching
+      background: url(images/icon-researching.png)
+
+    &--design
+      background: url(images/icon-design.png)
+
+    &--development
+      background: url(images/icon-development.png)
+
+    &--launch
+      background: url(images/icon-launch.png)
+
+
+  // Title element
+  &__title
+    color: white
+    font-size: 30px
+    font-weight: 300
+    line-height: 58px
+    text-transform: uppercase
+    // Делаем нижний отступ у самого заголовка, а не верхний у параграфа, т.к. параграфов
+    // с описанием может быть несколько
+    //
+    // Нижний отступ считается:
+    // Необходимый отступ (51px) - Расстояние от нижней границы интерлиньяжа до нижней
+    // границы самого текста (58px / 2 - 23px / 2) - Расстояние от верхней границы
+    // интерлиньяжа блока снизу до нижней границы самого текста блока снизу (20px / 2 -
+    // 10px / 2) = 28,5px, округление вниз
+    //
+    // Верхний отступ считается:
+    // Необходимый отступ (29px) - Расстояние от верхней границы интерлиньяжа до верхней
+    // границы самого текста (58px / 2 - 23px / 2) = 11,5px, округление вниз
+    margin: 11px 0 28px 0
+
+
+  // Description element
+  &__description
+    color: #fefefe
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    padding: 0 25px 35px

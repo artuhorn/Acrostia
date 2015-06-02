@@ -1,0 +1,95 @@
+/* SLIDER */
+
+.slider
+  position: relative
+  height: 1000px
+
+  &__arrow
+    width: 34px
+    height: 56px
+    position: absolute
+    top: 50%
+    margin-top: -28px
+    cursor: pointer
+
+    &--left
+      background-image: url(images/arrow-left.png)
+      left: 50px
+
+    &--right
+      background-image: url(images/arrow-right.png)
+      right: 50px
+
+  &__navigation
+    position: absolute
+    bottom: 90px
+    left: 50%
+    margin-left: -70px
+
+  &__switcher
+    display: inline-block
+    height: 20px
+    width: 20px
+    border-radius: 50%
+    background: rgba(255, 255, 255, .5)
+    margin: 0 40px 0 0
+    font-size: 0
+    cursor: pointer
+
+    &:last-child
+      margin-right: 0
+
+    &--active
+      background-color: #74c7d5
+
+
+.slider-page
+  position: relative
+  font-size: 0
+  display: none
+
+  &--active
+    display: flex
+
+  &__image
+    font-size: 0
+
+  &__l-content
+    display: flex
+    justify-content: flex-start
+
+  &__content
+    width: 860px
+    display: none
+    align-items: center
+    padding: 28px 42px
+    background-color: rgba(255, 255, 255, .3)
+    border-radius: 4px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+    &--active
+      display: flex
+
+    &-left
+      margin: 0 23px 0 0
+      flex: 1 1 auto
+      color: #74c7d5
+      font-size: 60px
+      font-weight: 300
+      line-height: 58px
+      text-align: right
+      display: inline-block
+
+    &-right
+      display: inline-block
+      flex: 1 0 auto
+      color: #74c7d5
+      font-size: 120px
+      font-weight: 900
+      line-height: 120px
+      text-transform: uppercase
+      text-align: right
+      transform: scale(1, 1.2)

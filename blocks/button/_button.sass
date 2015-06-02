@@ -1,0 +1,24 @@
+/* BUTTON */
+
+.button
+  display: inline-block
+  text-transform: uppercase
+  text-align: center
+  background-color: #a1ca6c
+  border-radius: 5px
+  position: relative
+
+  &--big
+    font-size: 25px
+    font-weight: 900
+    line-height: 52px
+    padding: 0 42px
+
+  &--triangle:after
+    content: ""
+    position: absolute
+    left: 50%
+    bottom: -30px
+    margin: 0 0 0 -15px
+    border: 15px solid transparent
+    border-top: 15px solid #a1ca6c

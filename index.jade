@@ -1,0 +1,237 @@
+
+//- Service Block on Services Page
+mixin Service(modifier, serviceTitle)
+    div.service
+        div.service__icon(class='service__icon'+modifier)
+        h2.service__title= serviceTitle
+        p.service__description Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+
+//- Navigation menu on each page
+mixin Menu(options)
+    ul.menu
+        //- Activating Home item
+        li(class='menu__item' + (options.activePage == 'Home' ? ' menu__item--active-home' : '')): a.menu__link(href="#") Home
+
+        //- Activating Services item
+        li(class='menu__item' + (options.activePage == 'Services' ? ' menu__item--active-service' : '')): a.menu__link(href="#") Services
+
+        //- Activating About item
+        li(class='menu__item' + (options.activePage == 'About' ? ' menu__item--active-about' : '')): a.menu__link(href="#") About
+
+        //- Activating Work item
+        li(class='menu__item' + (options.activePage == 'Work' ? ' menu__item--active-work' : '')): a.menu__link(href="#") Work
+
+        //- Activating Contacts item
+        li(class='menu__item' + (options.activePage == 'Contacts' ? ' menu__item--active-contacts' : '')): a.menu__link(href="#") Contacts
+
+//- Header (logo + menu)
+mixin Header(options)
+    img.logo(src="images/logo.png" alt="logo" width="151" height="30")
+    // -- Navigation + margin block
+    +Menu(options)
+    - if (!options.withoutDivider)
+        div.l-menu-divider
+
+//- Team member
+mixin TeamMember(options)
+    div.team-member
+        div.team-member__photo-frame
+            img.team-member__photo(src="images/"+options.photoName alt=options.name width="150" height="142")
+        h3.team-member__name= options.name
+        p.team-member__title= options.title
+        div.team_member__socials
+            +Socials
+
+//- Socials block
+mixin Socials
+    div.socials
+        div.socials__frame: a(href="//facebook.com").socials__icon.socials__icon--facebook
+        div.socials__frame: a(href="//twitter.com").socials__icon.socials__icon--twitter
+        div.socials__frame: a(href="//plus.google.com").socials__icon.socials__icon--google
+        div.socials__frame: a(href="//linkedin.com").socials__icon.socials__icon--linkedin
+
+//- Catalog item
+mixin CatalogItem(title, imagePath)
+    div.catalog-item
+        div.l-controls
+            div.catalog-item__controls
+                div.catalog-item__control-zoomIn
+            img.catalog-item__thumbnail(src="images/" + imagePath alt="catalog item" width="260" height="200")
+        h3.catalog-item__title= title
+
+doctype html
+html
+    head
+        title Acrostia
+        link(rel="stylesheet" href="styles.css")
+        link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,900,700" type="text/css")
+        script(src="blocks/slider/slider.js" defer)
+    body
+
+        //---------------------------------------------------------------------
+        // SECTION [ HOME ]
+        div.slider
+            div.l-center
+                // Header
+                +Header({activePage: 'Home', withoutDivider: true})
+
+
+            //- Content section mixin
+            mixin ContentSection(leftSection, rightSection, active)
+                div.slider-page__content(class=(active ? "slider-page__content--active" : ""))
+                    p.slider-page__content-left!= leftSection
+                    p.slider-page__content-right= rightSection
+
+            // Slider page 1
+            div.slider-page.slider-page--active
+                img.slider-page__image(src="images/slider-page1.png" alt="" width="100%")
+                +ContentSection("<span class='text--uppercase'>Good ideas</span> comes", "First!", true)
+                +ContentSection("<span class='text--uppercase'>Bad ideas</span> comes", "Second!")
+                +ContentSection("<span class='text--uppercase'>Some ideas</span> never", "comes")
+
+            // Slider page 2
+            div.slider-page
+                img.slider-page__image(src="images/slider-page2.jpg" alt="" width="100%")
+
+            // Content controls
+            div.slider__arrow.slider__arrow--left(onclick="nextContentPage(-1)")
+            div.slider__arrow.slider__arrow--right(onclick="nextContentPage(1)")
+
+            // Slider controls
+            ul.slider__navigation
+                li.slider__switcher.slider__switcher--active(onclick="changeSliderPage(event)")
+                li.slider__switcher(onclick="changeSliderPage(event)")
+                li.slider__switcher(onclick="changeSliderPage(event)")
+
+
+        //---------------------------------------------------------------------
+        // SECTION [ SERVICES ]
+        div.section.section--services
+            div.l-center
+                // Header
+                +Header({activePage: 'Services'})
+
+                // Standard section's blocks
+                div.section__title Our services
+                div.section__title.section__title--subtitle Cras commodo mattis justo nec <span class="text--important">lobortis</span>. Nam ut tellus lobortis, ullamcorper massa sit amet
+                div.section__description.section__description--services Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
+
+                // Services + layout container for flex
+                div.l-services
+                    +Service("--researching", "Researching")
+                    +Service("--design",      "Design")
+                    +Service("--development", "Development")
+                    +Service("--launch",      "Launch")
+
+
+        //---------------------------------------------------------------------
+        // SECTION [ ABOUT ]
+        div.section.section--about
+            div.l-center
+                // Header
+                +Header({activePage: 'About'})
+
+                // Standard section's blocks
+                div.section__title Who we are & what we do
+                div.section__description.section__description--about Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
+
+                div.section__l-button
+                    div.button.button--big.button--triangle Meet the team
+
+                // Team blocks + layout container for flex
+                div.l-team
+                    +TeamMember({photoName: 'user.png', name: 'Anton Petrov', title: 'General manager'})
+                    +TeamMember({photoName: 'user.png', name: 'Kirl Donchev', title: 'Design master'})
+                    +TeamMember({photoName: 'user.png', name: 'Ilian Bonev', title: 'Developer Ninja'})
+                    +TeamMember({photoName: 'user.png', name: 'Doni Stamov', title: 'SEO guru'})
+
+
+        //---------------------------------------------------------------------
+        // SECTION [ WORKS ]
+        div.section.section--work
+            div.l-center
+                // Header
+                +Header({activePage: 'Work'})
+
+                // Standard section's blocks
+                div.section__title Our work
+                div.section__description.section__description--work Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
+
+                // Filter for catalog
+                div.filter
+                    h2.filter__title Portfolio
+                    ul.filter__options
+                        li.filter__option All
+                        li.filter__option.filter__option--active Photography
+                        li.filter__option Logo design
+                        li.filter__option Web design
+
+                // Catalog
+                div.l-catalog
+                    +CatalogItem("Aenean a elit",       "catalog-item_1.png")
+                    +CatalogItem("Aliquam",             "catalog-item_2.png")
+                    +CatalogItem("Suspendisse libero",  "catalog-item_3.png")
+                    +CatalogItem("Maecenas fringilla",  "catalog-item_4.png")
+                    +CatalogItem("Donec vehicula",      "catalog-item_5.png")
+                    +CatalogItem("Ut et sapien",        "catalog-item_6.png")
+                    +CatalogItem("quis malesuada",      "catalog-item_7.png")
+                    +CatalogItem("Vestibulum ante",     "catalog-item_8.png")
+
+        //---------------------------------------------------------------------
+        // SECTION [ CONTACTS ]
+        div.section.section--contacts
+            div.l-center
+                // Header
+                +Header({activePage: 'Contacts'})
+
+                // Standard section's blocks
+                div.section__title Contact us
+                div.section__description.section__description--contacts Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.
+
+                // Flex container for contacts and form
+                div.l-contacts
+                    // Contacts section
+                    div.contacts
+                        h2.contacts__title Address
+                        // Split address section and map for two columns
+                        div.l-flex-row
+                            div.l-flex-2column
+                                div.l-flex-column
+                                    h3.contacts__firm-name Acrostia
+                                    p.contacts__address Sevenoaks Rd
+                                    p.contacts__address Sevenoaks TN14 7HR, UK
+                                    p.l-dummy
+
+                                    div.contacts__l-contacts-group
+                                        table.contacts-group
+                                            tr
+                                                td.contacts-group__contact-type Phone:
+                                                td.contacts-group__contact-value +44 555 555 555
+                                            tr
+                                                td.contacts-group__contact-type Fax:
+                                                td.contacts-group__contact-value +44 556  555 555
+                                            tr
+                                                td.contacts-group__contact-type E-mail:
+                                                td.contacts-group__contact-value <span class="text--email">info@acrostia.com</span>
+                                            tr
+                                                td.contacts-group__contact-type Skype:
+                                                td.contacts-group__contact-value Ac0stia
+
+                            div.l-flex-2column
+                                img.contacts__map(src="images/contacts__map.png" alt="" width="260" height="220")
+
+                    // Feedback form section
+                    div.feedback
+                        h2.feedback__title Ask a question
+                        div.feedback__form
+                            form(action="")
+                                input.feedback__input(name="name" type="text" placeholder="Name")
+                                input.feedback__input(name="email" type="text" placeholder="E-mail")
+                                textarea.feedback__text(name="question" placeholder="Your question")
+                                input.feedback__submit(type="submit" value="Send")
+
+        //---------------------------------------------------------------------
+        // SECTION [ FOOTER ]
+        div.footer
+            div.footer__socials.socials--big
+                +Socials

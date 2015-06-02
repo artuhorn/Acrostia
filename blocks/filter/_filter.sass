@@ -1,0 +1,33 @@
+.filter
+  display: flex
+  margin: 56px 0 0 0
+  padding: 37px 20px
+  line-height: 24px
+  border-top: 1px solid #94b963
+  border-bottom: 1px solid #94b963
+  align-items: center
+  justify-content: space-between
+
+  &__title
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+
+  &__options
+    display: inline-block
+    list-style: none
+    font-size: 16px
+    font-weight: 700
+    align-self: flex-end
+    justify-content: flex-end
+
+  &__option
+    display: inline-block
+    cursor: pointer
+    padding: 5px 10px
+
+    &--active,
+    &:hover
+      background-color: #f5c149
+      border-radius: 4px
+

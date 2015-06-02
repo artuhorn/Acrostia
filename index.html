@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Acrostia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,900,700" type="text/css">
+    <script src="blocks/slider/slider.js" defer></script>
+  </head>
+  <body>
+    <!-- SECTION [ HOME ]-->
+    <div class="slider">
+      <div class="l-center">
+        <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
+        <!-- -- Navigation + margin block-->
+        <ul class="menu">
+          <li class="menu__item menu__item--active-home"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Work</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+        </ul>
+      </div>
+      <!-- Slider page 1-->
+      <div class="slider-page slider-page--active"><img src="images/slider-page1.png" alt="" width="100%" class="slider-page__image">
+              <div class="slider-page__content slider-page__content--active">
+                <p class="slider-page__content-left"><span class='text--uppercase'>Good ideas</span> comes</p>
+                <p class="slider-page__content-right">First!</p>
+              </div>
+              <div class="slider-page__content">
+                <p class="slider-page__content-left"><span class='text--uppercase'>Bad ideas</span> comes</p>
+                <p class="slider-page__content-right">Second!</p>
+              </div>
+              <div class="slider-page__content">
+                <p class="slider-page__content-left"><span class='text--uppercase'>Some ideas</span> never</p>
+                <p class="slider-page__content-right">comes</p>
+              </div>
+      </div>
+      <!-- Slider page 2-->
+      <div class="slider-page"><img src="images/slider-page2.jpg" alt="" width="100%" class="slider-page__image"></div>
+      <!-- Content controls-->
+      <div onclick="nextContentPage(-1)" class="slider__arrow slider__arrow--left"></div>
+      <div onclick="nextContentPage(1)" class="slider__arrow slider__arrow--right"></div>
+      <!-- Slider controls-->
+      <ul class="slider__navigation">
+        <li onclick="changeSliderPage(event)" class="slider__switcher slider__switcher--active"></li>
+        <li onclick="changeSliderPage(event)" class="slider__switcher"></li>
+        <li onclick="changeSliderPage(event)" class="slider__switcher"></li>
+      </ul>
+    </div>
+    <!-- SECTION [ SERVICES ]-->
+    <div class="section section--services">
+      <div class="l-center">
+        <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
+        <!-- -- Navigation + margin block-->
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item menu__item--active-service"><a href="#" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Work</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+        </ul>
+        <div class="l-menu-divider"></div>
+        <!-- Standard section's blocks-->
+        <div class="section__title">Our services</div>
+        <div class="section__title section__title--subtitle">Cras commodo mattis justo nec <span class="text--important">lobortis</span>. Nam ut tellus lobortis, ullamcorper massa sit amet</div>
+        <div class="section__description section__description--services">Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</div>
+        <!-- Services + layout container for flex-->
+        <div class="l-services">
+          <div class="service">
+            <div class="service__icon service__icon--researching"></div>
+            <h2 class="service__title">Researching</h2>
+            <p class="service__description">Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </div>
+          <div class="service">
+            <div class="service__icon service__icon--design"></div>
+            <h2 class="service__title">Design</h2>
+            <p class="service__description">Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </div>
+          <div class="service">
+            <div class="service__icon service__icon--development"></div>
+            <h2 class="service__title">Development</h2>
+            <p class="service__description">Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </div>
+          <div class="service">
+            <div class="service__icon service__icon--launch"></div>
+            <h2 class="service__title">Launch</h2>
+            <p class="service__description">Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION [ ABOUT ]-->
+    <div class="section section--about">
+      <div class="l-center">
+        <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
+        <!-- -- Navigation + margin block-->
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+          <li class="menu__item menu__item--active-about"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Work</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+        </ul>
+        <div class="l-menu-divider"></div>
+        <!-- Standard section's blocks-->
+        <div class="section__title">Who we are & what we do</div>
+        <div class="section__description section__description--about">Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</div>
+        <div class="section__l-button">
+          <div class="button button--big button--triangle">Meet the team</div>
+        </div>
+        <!-- Team blocks + layout container for flex-->
+        <div class="l-team">
+          <div class="team-member">
+            <div class="team-member__photo-frame"><img src="images/user.png" alt="Anton Petrov" width="150" height="142" class="team-member__photo"/></div>
+            <h3 class="team-member__name">Anton Petrov</h3>
+            <p class="team-member__title">General manager</p>
+            <div class="team_member__socials">
+              <div class="socials">
+                <div class="socials__frame"><a href="//facebook.com" class="socials__icon socials__icon--facebook"></a></div>
+                <div class="socials__frame"><a href="//twitter.com" class="socials__icon socials__icon--twitter"></a></div>
+                <div class="socials__frame"><a href="//plus.google.com" class="socials__icon socials__icon--google"></a></div>
+                <div class="socials__frame"><a href="//linkedin.com" class="socials__icon socials__icon--linkedin"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-member__photo-frame"><img src="images/user.png" alt="Kirl Donchev" width="150" height="142" class="team-member__photo"/></div>
+            <h3 class="team-member__name">Kirl Donchev</h3>
+            <p class="team-member__title">Design master</p>
+            <div class="team_member__socials">
+              <div class="socials">
+                <div class="socials__frame"><a href="//facebook.com" class="socials__icon socials__icon--facebook"></a></div>
+                <div class="socials__frame"><a href="//twitter.com" class="socials__icon socials__icon--twitter"></a></div>
+                <div class="socials__frame"><a href="//plus.google.com" class="socials__icon socials__icon--google"></a></div>
+                <div class="socials__frame"><a href="//linkedin.com" class="socials__icon socials__icon--linkedin"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-member__photo-frame"><img src="images/user.png" alt="Ilian Bonev" width="150" height="142" class="team-member__photo"/></div>
+            <h3 class="team-member__name">Ilian Bonev</h3>
+            <p class="team-member__title">Developer Ninja</p>
+            <div class="team_member__socials">
+              <div class="socials">
+                <div class="socials__frame"><a href="//facebook.com" class="socials__icon socials__icon--facebook"></a></div>
+                <div class="socials__frame"><a href="//twitter.com" class="socials__icon socials__icon--twitter"></a></div>
+                <div class="socials__frame"><a href="//plus.google.com" class="socials__icon socials__icon--google"></a></div>
+                <div class="socials__frame"><a href="//linkedin.com" class="socials__icon socials__icon--linkedin"></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-member__photo-frame"><img src="images/user.png" alt="Doni Stamov" width="150" height="142" class="team-member__photo"/></div>
+            <h3 class="team-member__name">Doni Stamov</h3>
+            <p class="team-member__title">SEO guru</p>
+            <div class="team_member__socials">
+              <div class="socials">
+                <div class="socials__frame"><a href="//facebook.com" class="socials__icon socials__icon--facebook"></a></div>
+                <div class="socials__frame"><a href="//twitter.com" class="socials__icon socials__icon--twitter"></a></div>
+                <div class="socials__frame"><a href="//plus.google.com" class="socials__icon socials__icon--google"></a></div>
+                <div class="socials__frame"><a href="//linkedin.com" class="socials__icon socials__icon--linkedin"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION [ WORKS ]-->
+    <div class="section section--work">
+      <div class="l-center">
+        <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
+        <!-- -- Navigation + margin block-->
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item menu__item--active-work"><a href="#" class="menu__link">Work</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+        </ul>
+        <div class="l-menu-divider"></div>
+        <!-- Standard section's blocks-->
+        <div class="section__title">Our work</div>
+        <div class="section__description section__description--work">Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</div>
+        <!-- Filter for catalog-->
+        <div class="filter">
+          <h2 class="filter__title">Portfolio</h2>
+          <ul class="filter__options">
+            <li class="filter__option">All</li>
+            <li class="filter__option filter__option--active">Photography</li>
+            <li class="filter__option">Logo design</li>
+            <li class="filter__option">Web design</li>
+          </ul>
+        </div>
+        <!-- Catalog-->
+        <div class="l-catalog">
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_1.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Aenean a elit</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_2.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Aliquam</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_3.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Suspendisse libero</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_4.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Maecenas fringilla</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_5.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Donec vehicula</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_6.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Ut et sapien</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_7.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">quis malesuada</h3>
+          </div>
+          <div class="catalog-item">
+            <div class="l-controls">
+              <div class="catalog-item__controls">
+                <div class="catalog-item__control-zoomIn"></div>
+              </div><img src="images/catalog-item_8.png" alt="catalog item" width="260" height="200" class="catalog-item__thumbnail"/>
+            </div>
+            <h3 class="catalog-item__title">Vestibulum ante</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION [ CONTACTS ]-->
+    <div class="section section--contacts">
+      <div class="l-center">
+        <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
+        <!-- -- Navigation + margin block-->
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Work</a></li>
+          <li class="menu__item menu__item--active-contacts"><a href="#" class="menu__link">Contacts</a></li>
+        </ul>
+        <div class="l-menu-divider"></div>
+        <!-- Standard section's blocks-->
+        <div class="section__title">Contact us</div>
+        <div class="section__description section__description--contacts">Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien. Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim diam, ullamcorper quis libero et, ultricies commodo est. Quisque at ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet lacus, eget laoreet erat posuere quis.</div>
+        <!-- Flex container for contacts and form-->
+        <div class="l-contacts">
+          <!-- Contacts section-->
+          <div class="contacts">
+            <h2 class="contacts__title">Address</h2>
+            <!-- Split address section and map for two columns-->
+            <div class="l-flex-row">
+              <div class="l-flex-2column">
+                <div class="l-flex-column">
+                  <h3 class="contacts__firm-name">Acrostia</h3>
+                  <p class="contacts__address">Sevenoaks Rd</p>
+                  <p class="contacts__address">Sevenoaks TN14 7HR, UK</p>
+                  <p class="l-dummy"></p>
+                  <div class="contacts__l-contacts-group">
+                    <table class="contacts-group">
+                      <tr>
+                        <td class="contacts-group__contact-type">Phone:</td>
+                        <td class="contacts-group__contact-value">+44 555 555 555</td>
+                      </tr>
+                      <tr>
+                        <td class="contacts-group__contact-type">Fax:</td>
+                        <td class="contacts-group__contact-value">+44 556  555 555</td>
+                      </tr>
+                      <tr>
+                        <td class="contacts-group__contact-type">E-mail:</td>
+                        <td class="contacts-group__contact-value"><span class="text--email">info@acrostia.com</span></td>
+                      </tr>
+                      <tr>
+                        <td class="contacts-group__contact-type">Skype:</td>
+                        <td class="contacts-group__contact-value">Ac0stia</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="l-flex-2column"><img src="images/contacts__map.png" alt="" width="260" height="220" class="contacts__map"></div>
+            </div>
+          </div>
+          <!-- Feedback form section-->
+          <div class="feedback">
+            <h2 class="feedback__title">Ask a question</h2>
+            <div class="feedback__form">
+              <form action="">
+                <input name="name" type="text" placeholder="Name" class="feedback__input">
+                <input name="email" type="text" placeholder="E-mail" class="feedback__input">
+                <textarea name="question" placeholder="Your question" class="feedback__text"></textarea>
+                <input type="submit" value="Send" class="feedback__submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION [ FOOTER ]-->
+    <div class="footer">
+      <div class="footer__socials socials--big">
+        <div class="socials">
+          <div class="socials__frame"><a href="//facebook.com" class="socials__icon socials__icon--facebook"></a></div>
+          <div class="socials__frame"><a href="//twitter.com" class="socials__icon socials__icon--twitter"></a></div>
+          <div class="socials__frame"><a href="//plus.google.com" class="socials__icon socials__icon--google"></a></div>
+          <div class="socials__frame"><a href="//linkedin.com" class="socials__icon socials__icon--linkedin"></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
