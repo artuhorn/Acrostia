@@ -231,6 +231,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
 }
 .slider-page__content--active {
   display: flex;
