@@ -1,0 +1,80 @@
+//- Service Block on Services Page
+mixin Service(modifier, serviceTitle)
+    div.service
+        div.service__icon(class='service__icon' + modifier)
+        h2.service__title= serviceTitle
+        p.service__description Praesent interdum blandit quam. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+
+//- Navigation menu on each page
+mixin Menu(options)
+    ul.menu
+        //- Activating Home item
+        if (options.activePage == 'Home')
+            li(id="home" class='menu__item menu__item--active-home'): a.menu__link(href="#menu-home") Home
+        else
+            li(class='menu__item'): a.smoothScroll.menu__link(href="#home") Home
+
+        //- Activating Services item
+        if (options.activePage == 'Services')
+            li(id="services" class='menu__item menu__item--active-service'): a.menu__link(href="#menu-services") Services
+        else
+            li(class='menu__item'): a.smoothScroll.menu__link(href="#services") Services
+
+        //- Activating About item
+        if (options.activePage == 'About')
+            li(id="about" class='menu__item menu__item--active-about'): a.menu__link(href="#menu-about") About
+        else
+            li(class='menu__item'): a.smoothScroll.menu__link(href="#about") About
+
+        //- Activating Work item
+        if (options.activePage == 'Work')
+            li(id="work" class='menu__item menu__item--active-work'): a.menu__link(href="#Work") Work
+        else
+            li(class='menu__item'): a.smoothScroll.menu__link(href="#work") Work
+
+        //- Activating Contacts item
+        if (options.activePage == 'Contacts')
+            li(id="contacts" class='menu__item menu__item--active-contacts'): a.menu__link(href="#menu-contacts") Contacts
+        else
+            li(class='menu__item'): a.smoothScroll.menu__link(href="#contacts") Contacts
+
+//- Header (logo + menu)
+mixin Header(options)
+    img.logo(src="images/logo.png" alt="logo" width="151" height="30")
+    // -- Navigation + margin block
+    +Menu(options)
+    - if (!options.withoutDivider)
+        div.l-menu-divider
+
+//- Content section mixin
+mixin ContentSection(leftSection, rightSection, active)
+    div.slider-page__content(class=(active ? "slider-page__content--active" : ""))
+        p.slider-page__content-left!= leftSection
+        p.slider-page__content-right= rightSection
+
+//- Team member
+mixin TeamMember(options)
+    div.team-member
+        div.team-member__photo-frame
+            img.team-member__photo(src="images/" + options.photoName alt=options.name width="150" height="142")
+        h3.team-member__name= options.name
+        p.team-member__title= options.title
+        div.team_member__socials
+            +Socials
+
+//- Socials block
+mixin Socials
+    div.socials
+        div.socials__frame: a(href="//facebook.com").socials__icon.socials__icon--facebook
+        div.socials__frame: a(href="//twitter.com").socials__icon.socials__icon--twitter
+        div.socials__frame: a(href="//plus.google.com").socials__icon.socials__icon--google
+        div.socials__frame: a(href="//linkedin.com").socials__icon.socials__icon--linkedin
+
+//- Catalog item
+mixin CatalogItem(title, imagePath)
+    div.catalog-item
+        div.l-controls
+            div.catalog-item__controls
+                div.catalog-item__control-zoomIn
+            img.catalog-item__thumbnail(src="images/" + imagePath alt="catalog item" width="260" height="200")
+        h3.catalog-item__title= title

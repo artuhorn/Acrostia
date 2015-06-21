@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,900,700" type="text/css">
-    <script src="blocks/slider/slider.js" defer></script>
   </head>
   <body>
     <!-- SECTION [ HOME ]-->
@@ -16,38 +15,47 @@
         <!-- -- Navigation + margin block-->
         <ul class="menu">
           <li id="home" class="menu__item menu__item--active-home"><a href="#menu-home" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
-          <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="#work" class="menu__link">Work</a></li>
-          <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li>
+          <li class="menu__item"><a href="#services" class="smoothScroll menu__link">Services</a></li>
+          <li class="menu__item"><a href="#about" class="smoothScroll menu__link">About</a></li>
+          <li class="menu__item"><a href="#work" class="smoothScroll menu__link">Work</a></li>
+          <li class="menu__item"><a href="#contacts" class="smoothScroll menu__link">Contacts</a></li>
         </ul>
       </div>
       <!-- Slider page 1-->
-      <div class="slider-page slider-page--active"><img src="images/slider-page1.png" alt="" width="100%" class="slider-page__image">
-              <div class="slider-page__content slider-page__content--active">
-                <p class="slider-page__content-left"><span class='text--uppercase'>Good ideas</span> comes</p>
-                <p class="slider-page__content-right">First!</p>
-              </div>
-              <div class="slider-page__content">
-                <p class="slider-page__content-left"><span class='text--uppercase'>Bad ideas</span> comes</p>
-                <p class="slider-page__content-right">Second!</p>
-              </div>
-              <div class="slider-page__content">
-                <p class="slider-page__content-left"><span class='text--uppercase'>Some ideas</span> never</p>
-                <p class="slider-page__content-right">comes</p>
-              </div>
+      <!--div.slider-page.slider-page--active-->
+      <!--    img.slider-page__image(src="images/slider-page1.png" alt="" width="100%")
+      //+ContentSection("<span class='text--uppercase'>Good ideas</span> comes", "First!", true)
+      //+ContentSection("<span class='text--uppercase'>Bad ideas</span> comes", "Second!")
+      //+ContentSection("<span class='text--uppercase'>Some ideas</span> never", "comes")
+      
+      -->
+      <div class="slider-layout">
+        <div data-toggles="true" data-controls="false" data-autoswitch="true" class="adaptive-slider adaptive-slider--active">
+          <div class="adaptive-slider__container">
+            <ul class="adaptive-slider__list">
+              <li class="adaptive-slider__item adaptive-slider__item--active"><img src="images/slider-page1.png" alt="" width="100%" class="adaptive-slider__image"></li>
+              <li class="adaptive-slider__item"><img src="images/slider-page1.png" alt="" width="100%" class="adaptive-slider__image"></li>
+              <li class="adaptive-slider__item"><img src="images/slider-page1.png" alt="" width="100%" class="adaptive-slider__image"></li>
+            </ul>
+            <ul class="adaptive-slider__toggles"></ul>
+          </div>
+          <div class="adaptive-slider__controls"></div>
+        </div>
       </div>
-      <!-- Slider page 2-->
-      <div class="slider-page"><img src="images/slider-page1.jpg" alt="" width="100%" class="slider-page__image"></div>
+      <!--// Slider page 2-->
+      <!--div.slider-page-->
+      <!--    img.slider-page__image(src="images/slider-page1.jpg" alt="" width="100%")-->
+      <!---->
       <!-- Content controls-->
-      <div onclick="nextContentPage(-1)" class="slider__arrow slider__arrow--left"></div>
-      <div onclick="nextContentPage(1)" class="slider__arrow slider__arrow--right"></div>
-      <!-- Slider controls-->
-      <ul class="slider__navigation">
-        <li onclick="changeSliderPage(event)" class="slider__switcher slider__switcher--active"></li>
-        <li onclick="changeSliderPage(event)" class="slider__switcher"></li>
-        <li onclick="changeSliderPage(event)" class="slider__switcher"></li>
-      </ul>
+      <!--div.slider__arrow.slider__arrow--left(onclick="nextContentPage(-1)")-->
+      <!--div.slider__arrow.slider__arrow--right(onclick="nextContentPage(1)")-->
+      <!---->
+      <!--// Slider controls-->
+      <!--ul.slider__navigation-->
+      <!--    li.slider__switcher.slider__switcher--active(onclick="changeSliderPage(event)")-->
+      <!--    li.slider__switcher(onclick="changeSliderPage(event)")-->
+      <!--    li.slider__switcher(onclick="changeSliderPage(event)")-->
+      
     </div>
     <!-- SECTION [ SERVICES ]-->
     <div class="section section--services">
@@ -55,11 +63,11 @@
         <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
         <!-- -- Navigation + margin block-->
         <ul class="menu">
-          <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="#home" class="smoothScroll menu__link">Home</a></li>
           <li id="services" class="menu__item menu__item--active-service"><a href="#menu-services" class="menu__link">Services</a></li>
-          <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="#work" class="menu__link">Work</a></li>
-          <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li>
+          <li class="menu__item"><a href="#about" class="smoothScroll menu__link">About</a></li>
+          <li class="menu__item"><a href="#work" class="smoothScroll menu__link">Work</a></li>
+          <li class="menu__item"><a href="#contacts" class="smoothScroll menu__link">Contacts</a></li>
         </ul>
         <div class="l-menu-divider"></div>
         <!-- Standard section's blocks-->
@@ -97,11 +105,11 @@
         <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
         <!-- -- Navigation + margin block-->
         <ul class="menu">
-          <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#home" class="smoothScroll menu__link">Home</a></li>
+          <li class="menu__item"><a href="#services" class="smoothScroll menu__link">Services</a></li>
           <li id="about" class="menu__item menu__item--active-about"><a href="#menu-about" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="#work" class="menu__link">Work</a></li>
-          <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li>
+          <li class="menu__item"><a href="#work" class="smoothScroll menu__link">Work</a></li>
+          <li class="menu__item"><a href="#contacts" class="smoothScroll menu__link">Contacts</a></li>
         </ul>
         <div class="l-menu-divider"></div>
         <!-- Standard section's blocks-->
@@ -173,11 +181,11 @@
         <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
         <!-- -- Navigation + margin block-->
         <ul class="menu">
-          <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
-          <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#home" class="smoothScroll menu__link">Home</a></li>
+          <li class="menu__item"><a href="#services" class="smoothScroll menu__link">Services</a></li>
+          <li class="menu__item"><a href="#about" class="smoothScroll menu__link">About</a></li>
           <li id="work" class="menu__item menu__item--active-work"><a href="#Work" class="menu__link">Work</a></li>
-          <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li>
+          <li class="menu__item"><a href="#contacts" class="smoothScroll menu__link">Contacts</a></li>
         </ul>
         <div class="l-menu-divider"></div>
         <!-- Standard section's blocks-->
@@ -268,10 +276,10 @@
         <!-- Header--><img src="images/logo.png" alt="logo" width="151" height="30" class="logo"/>
         <!-- -- Navigation + margin block-->
         <ul class="menu">
-          <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
-          <li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
-          <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="#work" class="menu__link">Work</a></li>
+          <li class="menu__item"><a href="#home" class="smoothScroll menu__link">Home</a></li>
+          <li class="menu__item"><a href="#services" class="smoothScroll menu__link">Services</a></li>
+          <li class="menu__item"><a href="#about" class="smoothScroll menu__link">About</a></li>
+          <li class="menu__item"><a href="#work" class="smoothScroll menu__link">Work</a></li>
           <li id="contacts" class="menu__item menu__item--active-contacts"><a href="#menu-contacts" class="menu__link">Contacts</a></li>
         </ul>
         <div class="l-menu-divider"></div>
@@ -342,5 +350,9 @@
         </div>
       </div>
     </div>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js" defer></script>
+    <script src="js/vendor/smoothscroll.js" defer></script>
+    <script src="js/slider/slider.js" defer></script>
+    <script src="js/adaptive-slider/js/slider.js" defer></script>
   </body>
 </html>

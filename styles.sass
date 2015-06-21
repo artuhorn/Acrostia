@@ -18,9 +18,10 @@ body
 @import blocks/contacts/contacts
 @import blocks/footer/footer
 
+@import js/adaptive-slider/sass/slider
+
 
 /* COMMON STYLES */
-
 *
   margin: 0
   padding: 0
@@ -45,3 +46,13 @@ body
   &--uppercase
     text-transform: uppercase
 
+
+// Container for slider positioning
+.slider-layout
+  display: inline-block
+  font-size: 0
+  margin: 0 auto
+  //overflow: hidden
+  position: relative
+  width: 100%
+  //height: 1000px
