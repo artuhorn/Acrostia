@@ -29,13 +29,83 @@
       //+ContentSection("<span class='text--uppercase'>Some ideas</span> never", "comes")
       
       -->
-      <div class="slider-layout">
-        <div data-toggles="true" data-controls="false" data-autoswitch="true" class="adaptive-slider adaptive-slider--active">
+      <div id="main-slider" class="slider-layout">
+        <div data-toggles="true" data-controls="false" data-autoswitch="false" class="adaptive-slider adaptive-slider--active">
           <div class="adaptive-slider__container">
             <ul class="adaptive-slider__list">
-              <li class="adaptive-slider__item adaptive-slider__item--active"><img src="images/slider-page1.png" alt="" width="100%" class="adaptive-slider__image"></li>
-              <li class="adaptive-slider__item"><img src="images/slider-page1.png" alt="" width="100%" class="adaptive-slider__image"></li>
-              <li class="adaptive-slider__item"><img src="images/slider-page1.png" alt="" width="100%" class="adaptive-slider__image"></li>
+              <li id="ms1" class="adaptive-slider__item adaptive-slider__item--active"><img src="images/slider-page1.png" alt="Slider image" width="100%" class="adaptive-slider__image">
+                <!-- First inner slider-->
+                <div class="inner-slider slider-layout">
+                  <div data-toggles="false" data-controls="true" data-autoswitch="false" class="adaptive-slider adaptive-slider--active">
+                    <div class="adaptive-slider__container">
+                      <ul class="adaptive-slider__list">
+                        <!-- Slide 1-->
+                        <li id="is1s1" class="adaptive-slider__item adaptive-slider__item--active">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Good ideas</span> comes</p>
+                            <p class="adaptive-slider__content-right">First!</p>
+                          </div>
+                        </li>
+                        <!-- Slide 2-->
+                        <li id="is1s2" class="adaptive-slider__item">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Bad ideas</span> comes</p>
+                            <p class="adaptive-slider__content-right">Last!</p>
+                          </div>
+                        </li>
+                        <!-- Slide 3-->
+                        <li id="is1s3" class="adaptive-slider__item">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Bad ideas</span> comes</p>
+                            <p class="adaptive-slider__content-right">Last!</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="adaptive-slider__controls"></div>
+                  </div>
+                </div>
+              </li>
+              <li id="ms2" class="adaptive-slider__item"><img src="images/slider-page1.png" alt="Slider image" width="100%" class="adaptive-slider__image">
+                <!-- Second inner slider-->
+                <div class="inner-slider slider-layout">
+                  <div data-toggles="false" data-controls="true" data-autoswitch="false" class="adaptive-slider adaptive-slider--active">
+                    <div class="adaptive-slider__container">
+                      <ul class="adaptive-slider__list">
+                        <!-- Slide 1-->
+                        <li id="is2s1" class="adaptive-slider__item adaptive-slider__item--active">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Inner</span> slide 1</p>
+                            <p class="adaptive-slider__content-right">Outer 2</p>
+                          </div>
+                        </li>
+                        <!-- Slide 2-->
+                        <li id="is2s2" class="adaptive-slider__item">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Inner</span> slide 2</p>
+                            <p class="adaptive-slider__content-right">Outer 2</p>
+                          </div>
+                        </li>
+                        <!-- Slide 3-->
+                        <li id="is2s3" class="adaptive-slider__item">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Inner</span> slide 3</p>
+                            <p class="adaptive-slider__content-right">Outer 2</p>
+                          </div>
+                        </li>
+                        <!-- Slide 4-->
+                        <li id="is2s4" class="adaptive-slider__item">
+                          <div class="adaptive-slider__content">
+                            <p class="adaptive-slider__content-left"><span class='text--uppercase'>Inner</span> slide 4</p>
+                            <p class="adaptive-slider__content-right">Outer 2</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="adaptive-slider__controls"></div>
+                  </div>
+                </div>
+              </li>
             </ul>
             <ul class="adaptive-slider__toggles"></ul>
           </div>

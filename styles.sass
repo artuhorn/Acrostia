@@ -5,6 +5,20 @@ body
   color: white
   background-color: #1b1c16
 
+// Container for slider positioning
+.slider
+  position: relative
+  font-size: 0
+  max-height: 1000px
+  overflow: hidden
+
+.slider-layout
+  display: inline-block
+  font-size: 0
+  margin: 0 auto
+  position: relative
+  width: 100%
+
 @import blocks/layout/layout
 @import blocks/logo/logo
 @import blocks/menu/menu
@@ -47,12 +61,4 @@ body
     text-transform: uppercase
 
 
-// Container for slider positioning
-.slider-layout
-  display: inline-block
-  font-size: 0
-  margin: 0 auto
-  //overflow: hidden
-  position: relative
-  width: 100%
-  //height: 1000px
+
