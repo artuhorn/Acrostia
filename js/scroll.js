@@ -29,7 +29,7 @@ $(document).ready(function() {
          var delta = linkOffsetY + scrollTop;
 
          // Выполняем прокрутку
-         $('body').animate({scrollTop: delta}, 800, "swing");
+         $('body, html').animate({scrollTop: delta}, 800, "swing");
 
       });
    }
