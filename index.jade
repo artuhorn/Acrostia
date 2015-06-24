@@ -18,14 +18,8 @@ html
                 // Header
                 +Header({activePage: 'Home', withoutDivider: true})
 
-            // Slider page 1
-            //div.slider-page.slider-page--active
-            //    img.slider-page__image(src="images/slider-page1.png" alt="" width="100%")
-                //+ContentSection("<span class='text--uppercase'>Good ideas</span> comes", "First!", true)
-                //+ContentSection("<span class='text--uppercase'>Bad ideas</span> comes", "Second!")
-                //+ContentSection("<span class='text--uppercase'>Some ideas</span> never", "comes")
-
             //- Slider block
+            //-TODO: Во время загрузки страницы видны все content-блоки. Необходимо это исправить
             div#main-slider.slider-layout
                 div.adaptive-slider(data-toggles="true" data-controls="false" data-autoswitch="false" class="adaptive-slider--active")
                     div.adaptive-slider__container
@@ -33,7 +27,7 @@ html
                         ul.adaptive-slider__list
                             //- Slide 1
                             li#ms1.adaptive-slider__item(class="adaptive-slider__item--active")
-                                img.adaptive-slider__image(src="images/slider-page1.png" alt="Slider image" width="100%")
+                                img.adaptive-slider__image(src="images/slider-page1.jpg" alt="Slider image" width="100%")
 
 
                                 // First inner slider
@@ -67,7 +61,7 @@ html
 
                             //- Slide 2
                             li#ms2.adaptive-slider__item(class="")
-                                img.adaptive-slider__image(src="images/slider-page1.png" alt="Slider image" width="100%")
+                                img.adaptive-slider__image(src="images/slider-page1.jpg" alt="Slider image" width="100%")
 
                                 // Second inner slider
                                 div.inner-slider.slider-layout
@@ -78,25 +72,25 @@ html
                                                 li#is2s1.adaptive-slider__item(class="adaptive-slider__item--active")
                                                     div.adaptive-slider__content
                                                         p.adaptive-slider__content-left!= "<span class='text--uppercase'>Inner</span> slide 1"
-                                                        p.adaptive-slider__content-right= "Outer 2"
+                                                        p.adaptive-slider__content-right= "SL2"
 
                                                 // Slide 2
                                                 li#is2s2.adaptive-slider__item
                                                     div.adaptive-slider__content
                                                         p.adaptive-slider__content-left!= "<span class='text--uppercase'>Inner</span> slide 2"
-                                                        p.adaptive-slider__content-right= "Outer 2"
+                                                        p.adaptive-slider__content-right= "SL2"
 
                                                 // Slide 3
                                                 li#is2s3.adaptive-slider__item
                                                     div.adaptive-slider__content
                                                         p.adaptive-slider__content-left!= "<span class='text--uppercase'>Inner</span> slide 3"
-                                                        p.adaptive-slider__content-right= "Outer 2"
+                                                        p.adaptive-slider__content-right= "SL2"
 
                                                 // Slide 4
                                                 li#is2s4.adaptive-slider__item
                                                     div.adaptive-slider__content
                                                         p.adaptive-slider__content-left!= "<span class='text--uppercase'>Inner</span> slide 4"
-                                                        p.adaptive-slider__content-right= "Outer 2"
+                                                        p.adaptive-slider__content-right= "SL2"
 
                                         div.adaptive-slider__controls
                                 //- end of second inner slider
@@ -243,8 +237,7 @@ html
 
         script(src="//code.jquery.com/jquery-2.1.4.min.js" defer)
         //script(src="js/vendor/jquery-2.1.4.js" defer)
-        script(src="js/vendor/smoothscroll.js" defer)
-        script(src="js/slider/slider.js" defer)
+        script(src="js/scroll.js" defer)
         script(src="js/adaptive-slider/js/slider.js" defer)
 
 
