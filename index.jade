@@ -13,7 +13,7 @@ html
 
         //---------------------------------------------------------------------
         // SECTION [ HOME ]
-        div.slider
+        div.slider.section
             div.l-center
                 // Header
                 +Header({activePage: 'Home', withoutDivider: true})
@@ -241,7 +241,8 @@ html
             div.footer__socials.socials--big
                 +Socials
 
-        script(src="//code.jquery.com/jquery-2.1.4.min.js" defer)
+        //script(src="//code.jquery.com/jquery-2.1.4.min.js" defer)
+        script(src="js/vendor/jquery-2.1.4.js" defer)
         script(src="js/vendor/smoothscroll.js" defer)
         script(src="js/slider/slider.js" defer)
         script(src="js/adaptive-slider/js/slider.js" defer)

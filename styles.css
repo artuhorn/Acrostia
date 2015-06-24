@@ -3,30 +3,17 @@ body {
   font-family: Lato, sans-serif;
   color: white;
   background-color: #1b1c16;
-}
-
-.slider {
-  position: relative;
-  font-size: 0;
-  max-height: 1000px;
-  overflow: hidden;
-}
-
-.slider-layout {
-  display: inline-block;
-  font-size: 0;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
+  font-size: 62.5%;
 }
 
 /* LAYOUT */
 .section {
-  min-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   position: relative;
   text-align: center;
   padding: 0 0 124px 0;
+  width: 100%;
 }
 .section--services {
   background: #b24a50 url(images/background-services.png) no-repeat;
@@ -174,105 +161,6 @@ body {
   font-weight: 400;
   line-height: 20px;
   padding: 0 25px 35px;
-}
-
-/* SLIDER */
-.slider {
-  position: relative;
-  font-size: 0;
-  max-height: 1000px;
-  overflow: hidden;
-}
-.slider__arrow {
-  width: 34px;
-  height: 56px;
-  position: absolute;
-  top: 50%;
-  margin-top: -28px;
-  cursor: pointer;
-}
-.slider__arrow--left {
-  background-image: url(images/arrow-left.png);
-  left: 50px;
-}
-.slider__arrow--right {
-  background-image: url(images/arrow-right.png);
-  right: 50px;
-}
-.slider__navigation {
-  position: absolute;
-  bottom: 90px;
-  left: 50%;
-  margin-left: -70px;
-}
-.slider__switcher {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  margin: 0 40px 0 0;
-  font-size: 0;
-  cursor: pointer;
-}
-.slider__switcher:last-child {
-  margin-right: 0;
-}
-.slider__switcher--active {
-  background-color: #74c7d5;
-}
-
-.slider-page {
-  position: relative;
-  font-size: 0;
-  display: none;
-}
-.slider-page--active {
-  display: flex;
-}
-.slider-page__image {
-  font-size: 0;
-}
-.slider-page__l-content {
-  display: flex;
-  justify-content: flex-start;
-}
-.slider-page__content {
-  width: 860px;
-  display: none;
-  align-items: center;
-  padding: 28px 42px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -100%);
-}
-.slider-page__content--active {
-  display: flex;
-}
-.slider-page__content-left {
-  margin: 0 23px 0 0;
-  flex: 1 1 auto;
-  color: #74c7d5;
-  font-size: 60px;
-  font-weight: 300;
-  line-height: 58px;
-  text-align: right;
-  display: inline-block;
-}
-.slider-page__content-right {
-  display: inline-block;
-  flex: 1 0 auto;
-  color: #74c7d5;
-  font-size: 120px;
-  font-weight: 900;
-  line-height: 120px;
-  text-transform: uppercase;
-  text-align: right;
-  transform: scale(1, 1.2);
 }
 
 /* TEAM MEMBER */
@@ -778,8 +666,8 @@ body {
 }
 
 /* CUSTOM STYLES FOR ADAPTIVE SLIDER */
-.adaptive-slider__toggles {
-  bottom: 20%;
+.adaptive-slider__image {
+  max-height: 1000px;
 }
 .adaptive-slider__toggle {
   height: 20px;
@@ -805,7 +693,7 @@ body {
   z-index: 100;
 }
 .inner-slider.slider-layout .adaptive-slider__container {
-  width: 50%;
+  width: 60%;
 }
 .inner-slider.slider-layout .adaptive-slider__item {
   display: none;
@@ -817,7 +705,7 @@ body {
   display: block;
 }
 .inner-slider.slider-layout .adaptive-slider__content {
-  width: 860px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 28px 42px;
@@ -826,7 +714,7 @@ body {
 }
 .inner-slider.slider-layout .adaptive-slider__content-left {
   margin: 0 23px 0 0;
-  flex: 1 1 auto;
+  flex: 1 1 40%;
   color: #74c7d5;
   font-size: 60px;
   font-weight: 300;
@@ -836,13 +724,13 @@ body {
 }
 .inner-slider.slider-layout .adaptive-slider__content-right {
   display: inline-block;
-  flex: 1 0 auto;
+  flex: 1 1 60%;
   color: #74c7d5;
   font-size: 120px;
   font-weight: 900;
   line-height: 120px;
   text-transform: uppercase;
-  text-align: right;
+  text-align: left;
   transform: scale(1, 1.2);
 }
 .inner-slider.slider-layout .adaptive-slider__controls-button {
@@ -865,6 +753,20 @@ body {
 .inner-slider.slider-layout .adaptive-slider__controls-button--prev {
   background-image: url(images/arrow-left.png);
   content: "";
+}
+
+.slider {
+  position: relative;
+  font-size: 0;
+  padding: 0;
+}
+
+.slider-layout {
+  display: inline-block;
+  font-size: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
 }
 
 /* COMMON STYLES */

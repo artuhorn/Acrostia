@@ -4,26 +4,15 @@ body
   font-family: Lato, sans-serif
   color: white
   background-color: #1b1c16
+  font-size: 62.5%
 
-// Container for slider positioning
-.slider
-  position: relative
-  font-size: 0
-  max-height: 1000px
-  overflow: hidden
 
-.slider-layout
-  display: inline-block
-  font-size: 0
-  margin: 0 auto
-  position: relative
-  width: 100%
 
 @import blocks/layout/layout
 @import blocks/logo/logo
 @import blocks/menu/menu
 @import blocks/service/service
-@import blocks/slider/slider
+//@import blocks/slider/slider
 @import blocks/team-member/team-member
 @import blocks/socials/socials
 @import blocks/button/button
@@ -34,6 +23,20 @@ body
 
 @import js/adaptive-slider/sass/slider
 
+// Container for slider positioning
+.slider
+  position: relative
+  font-size: 0
+  padding: 0
+//max-height: 1000px
+//overflow: hidden
+
+.slider-layout
+  display: inline-block
+  font-size: 0
+  margin: 0 auto
+  position: relative
+  width: 100%
 
 /* COMMON STYLES */
 *
