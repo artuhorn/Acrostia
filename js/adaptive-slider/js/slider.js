@@ -79,7 +79,7 @@ var Slider = (function() {
    * */
    function getChildrenElements(container, parentSelector, childrenSelector) {
       return container.find(childrenSelector).filter(function(index) {
-         return this.closest(parentSelector) === container[0];
+         return $(this).closest(parentSelector)[0] === container[0];
       })
    }
 
